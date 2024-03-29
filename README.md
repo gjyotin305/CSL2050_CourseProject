@@ -1,8 +1,8 @@
-# CSL2050_CourseProject
+# CSL2050 CourseProject
 
-## Image Retrieval
+## TOPIC : Image Retrieval
 
-## Team:
+## Team Members:
   - Akshat Jain (B22CS096)
   - Harshiv Shah (B22CS098)
   - Mehta Jay Kamalkumar (B22CS034)
