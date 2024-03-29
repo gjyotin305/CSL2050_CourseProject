@@ -13,6 +13,7 @@
 
 ```bash
 ├── Experiments
+│  ├── cifar_10_knn.ipynb
 │  └── HOG+KNN.ipynb
 ├── LICENSE
 ├── Preprocessing
