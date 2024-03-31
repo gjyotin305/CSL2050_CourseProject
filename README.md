@@ -14,8 +14,11 @@
 ```bash
 ├── Experiments
 │  ├── cifar_10_knn.ipynb
-│  └── HOG+KNN.ipynb
+│  ├── cifar_10_pca_knn.ipynb
+│  ├── HOG+KNN.ipynb
+│  └── PCA+HOG+KNN.ipynb
 ├── LICENSE
+├── MidTerm_Report.pdf
 ├── Preprocessing
 │  ├── cifar_eda.ipynb
 │  └── utils.py
