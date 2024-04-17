@@ -16,6 +16,8 @@
 │   ├── cifar_10_knn.ipynb
 │   ├── cifar_10_pca_knn.ipynb
 │   ├── cnn-resnet34-cifar10.ipynb
+│   ├── cifar_10_mean.ipynb
+│   ├── cifar_10_centroid.ipynb
 │   ├── HOG+KNN.ipynb
 │   ├── Logs
 │   │   └── RESNET50_CIFAR.out
