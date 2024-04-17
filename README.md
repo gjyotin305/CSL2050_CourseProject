@@ -13,14 +13,22 @@
 
 ```bash
 ├── Experiments
-│  ├── cifar_10_knn.ipynb
-│  ├── cifar_10_pca_knn.ipynb
-│  ├── HOG+KNN.ipynb
-│  └── PCA+HOG+KNN.ipynb
+│   ├── cifar_10_knn.ipynb
+│   ├── cifar_10_pca_knn.ipynb
+│   ├── cnn-resnet34-cifar10.ipynb
+│   ├── HOG+KNN.ipynb
+│   ├── Logs
+│   │   └── RESNET50_CIFAR.out
+│   ├── PCA+HOG+KNN.ipynb
+│   └── train.py
 ├── LICENSE
 ├── MidTerm_Report.pdf
+├── Model
+│   ├── CIFAR.pt
+│   └── test.py
 ├── Preprocessing
-│  ├── cifar_eda.ipynb
-│  └── utils.py
+│   ├── cifar_eda.ipynb
+│   ├── k_means.py
+│   └── utils.py
 └── README.md
 ```
