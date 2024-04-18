@@ -48,8 +48,6 @@ import torchvision.datasets as datasets
 import torchvision.models as models
 
 resnet = models.resnet50(pretrained=True)
-# print(resnet)
-# print(resnet.fc)
 
 
 class JHARMNet(nn.Module):
