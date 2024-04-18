@@ -1,9 +1,11 @@
 import torch
+import os
 import torch.nn as nn
 import torchvision.datasets as datasets
 import torchvision.transforms as transforms
 import torchvision.models as models
 
+os.system("gdown --id 1qO2OLR7skDibo1LaMKD3CiOl_jaCTZ0h")
 
 class JHARMNet(nn.Module):
     def __init__(self, pretrained_model, num_classes):
@@ -34,7 +36,6 @@ class HiddenLayer(nn.Module):
         out = self.premodel(x)
         out_new_layer = self.new_layer(out)
         return out_new_layer
-
 
 
 resnet = models.resnet50(pretrained=True)
