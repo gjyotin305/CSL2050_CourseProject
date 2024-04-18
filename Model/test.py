@@ -16,12 +16,33 @@ class JHARMNet(nn.Module):
         out = self.premodel(x)
         return out
 
+class HiddenLayer(nn.Module):
+    def __init__(self, pretrained_model):
+        super().__init__()
+        self.premodel = pretrained_model
+        self.new_layer = nn.Sequential(
+                nn.Linear(1000, 512),
+                nn.LeakyReLU(),
+                nn.Linear(512, 512),
+                nn.LeakyReLU(),
+                nn.Linear(512, 256),
+                nn.LeakyReLU(),
+                nn.Linear(256, 10)
+                )
+
+    def forward(self, x):
+        out = self.premodel(x)
+        out_new_layer = self.new_layer(out)
+        return out_new_layer
+
+
+
 resnet = models.resnet50(pretrained=True)
 
 x = torch.randn((2, 3, 32, 32))
 
 print(x.shape)
-model_check = JHARMNet(resnet, 10)
-model_check.load_state_dict(torch.load("CIFAR.pt"))
+model_check = HiddenLayer(resnet)
+model_check.load_state_dict(torch.load("CIFAR_end_hll.pt"))
 model_check.eval()
-print(model_check.forward(x))
+print(model_check.forward(x).shape)
