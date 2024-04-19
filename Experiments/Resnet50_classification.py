@@ -119,27 +119,19 @@ def retrieve(image,feature_path,k):
     distances = euclidean_distances(test_features, [f[0].cpu() for f in class_features])
     sorted_indices = np.argsort(distances.flatten())[:k]
     closest_indices = [class_features[idx][1] for idx in sorted_indices]
-
-    sharpened_test_image = image.filter(ImageFilter.SHARPEN)
-
-    fig, axes = plt.subplots(1, len(closest_indices) + 1, figsize=(5, 5))
-
-    axes[0].imshow(sharpened_test_image)
-    axes[0].set_title('Test Image')
-    axes[0].axis('off')
-
+    retrieved_images = []
     for i, idx in enumerate(closest_indices):
         closest_image = Image.fromarray(train_x[idx])
         sharpened_closest_image = closest_image.filter(ImageFilter.SHARPEN)
-        axes[i+1].imshow(sharpened_closest_image)
-        axes[i+1].set_title(f"Closest Image {i+1}")
-        axes[i+1].axis('off')
+        retrieved_images.append(sharpened_closest_image)
 
-    plt.tight_layout() 
-    plt.show()
+    return retrieved_images
+
+
+
 
 
 
 test_image = Image.open("/kaggle/input/planes/download.jpeg")
 feature_path = "Model\Resnet50_train_features.pt"
-retrieve(test_image,feature_path,3)
+retrieved_images = retrieve(test_image,feature_path,3)
