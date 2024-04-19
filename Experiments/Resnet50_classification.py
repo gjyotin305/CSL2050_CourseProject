@@ -110,7 +110,7 @@ def predict(features_path,image):
     
     
 
-def retrieve(image,feature_path,k):
+def retrieve(image,k,feature_path="Model\Resnet50_train_features.pt"):
 
     test_label,z,features,class_images_dict,train_x = predict(feature_path,image)
     class_indices = class_images_dict[test_label.item()]
@@ -132,6 +132,5 @@ def retrieve(image,feature_path,k):
 
 
 
-test_image = Image.open("/kaggle/input/planes/download.jpeg")
-feature_path = "Model\Resnet50_train_features.pt"
-retrieved_images = retrieve(test_image,feature_path,3)
+# test_image = Image.open("/kaggle/input/planes/download.jpeg")
+# retrieved_images = retrieve(test_image,3)
