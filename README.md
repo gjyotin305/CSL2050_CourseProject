@@ -29,7 +29,7 @@
 │   ├── CIFAR.pt
 │   └── test.py
 ├──Gradio_Interface
-|   ├── ui_gradio.py
+│   ├── ui_gradio.py
 ├── Preprocessing
 │   ├── cifar_eda.ipynb
 │   ├── k_means.py
