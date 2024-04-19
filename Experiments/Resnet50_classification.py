@@ -50,14 +50,13 @@ class HiddenLayer(nn.Module):
         return out_new_layer
     
 
-
 def predict(features_path,image):
-    batch1 = unpickle("Model\data\data_batch_1")
-    batch2 = unpickle("Model\data\data_batch_2")
-    batch3 = unpickle("Model\data\data_batch_3")
-    batch4 = unpickle("Model\data\data_batch_4")
-    batch5 = unpickle("Model\data\data_batch_5")
-    test_batch = unpickle("Model\data\test_batch")
+    batch1 = unpickle(r"Model\data\data_batch_1")
+    batch2 = unpickle(r"Model\data\data_batch_2")
+    batch3 = unpickle(r"Model\data\data_batch_3")
+    batch4 = unpickle(r"Model\data\data_batch_4")
+    batch5 = unpickle(r"Model\data\data_batch_5")
+    test_batch = unpickle(r"Model\data\test_batch")
     train_batch = [batch1,batch2,batch3,batch4,batch5]
     train_y = []
     train_x = []
@@ -85,19 +84,13 @@ def predict(features_path,image):
         class_images_dict[labels].append(batch_idx)
      
     transform = transforms.Compose([
-                transforms.Resize((224, 224)),
-                transforms.ToTensor(),
-                transforms.Normalize(mean, std)])
-
-    image_resized = image.resize((IMAGE_SIZE, IMAGE_SIZE), Image.ANTIALIAS)
-    image_tensor = transform(image_resized).unsqueeze(0) 
-    image_tensor = image_tensor.to(device)
-
+        transforms.Resize((224, 224)),
+        transforms.ToTensor(),
+        transforms.Normalize(mean, std)
+    ])
+    pil_image = Image.fromarray(image)
+    image_tensor = transform(pil_image).unsqueeze(0) 
     resnet = models.resnet50(pretrained=True)
-
-    x = torch.randn((2, 3, 32, 32))
-
-    print(x.shape)
     model_check = HiddenLayer(resnet)
     model_check.load_state_dict(torch.load("CIFAR_end_hll.pt"))
     model_check.eval()
@@ -110,8 +103,8 @@ def predict(features_path,image):
     
     
 
-def retrieve(image,k,feature_path="Model\Resnet50_train_features.pt"):
-
+def retrieve(image,k,feature_path=r"Model\Resnet50_train_features.pt"):
+    print(image.shape)
     test_label,z,features,class_images_dict,train_x = predict(feature_path,image)
     class_indices = class_images_dict[test_label.item()]
     class_features = [(features[idx], idx) for idx in class_indices]
