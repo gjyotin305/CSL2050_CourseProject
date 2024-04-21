@@ -47,8 +47,10 @@ This guide will help you set up and install the necessary dependencies for runni
    git clone https://github.com/gjyotin305/CSL2050_CourseProject.git
 2. ```bash
    cd CSL2050_CourseProject
-3. 
-   cd project-directory
+3. ```bash
+   pip install -r requirements.txt
+4. ```bash
+    python .\ui_gradio.py 
  
 
    
