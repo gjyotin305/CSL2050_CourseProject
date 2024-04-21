@@ -1,0 +1,13 @@
+gradio==4.27.0
+matplotlib==3.8.0
+numpy==1.26.4
+opencv_python==4.9.0.80
+Pillow==10.3.0
+protobuf==5.26.1
+scikit_learn==1.4.2
+tensorflow==2.16.1
+tensorflow_intel==2.16.1
+torch==2.1.2
+torchvision==0.16.2
+tqdm==4.65.0
+wandb==0.16.6
