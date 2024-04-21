@@ -9,6 +9,19 @@
   - Jyotin Goel (B22AI063)
   - Rhythm Baghel (B22CS042)
 
+## Demo
+
+
+### **RiyalNet**
+![Alt text](riyalnet.gif "RiyalNet")
+
+
+### **QuickNet**
+![Alt text](quicknet.gif "QuickNet")
+
+
+
+
 ## Repository Structure 
 
 ```bash
@@ -56,10 +69,4 @@ This command will start the Gradio interface and display the URL where you can a
 
 If you want to specify a custom IP address, you can change the argument of `demo.launch()` by inserting `server_name = "YOUR_IP_ADDRESS"`. Alternatively, you can use `share=True` to generate a public link.
 
-**RiyalNet**
-![Alt text](riyalnet.gif "RiyalNet")
-
-
-**QuickNet**
-![Alt text](quicknet.gif "QuickNet")
 
