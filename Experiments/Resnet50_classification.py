@@ -21,7 +21,6 @@ os.system("gdown --id 1qO2OLR7skDibo1LaMKD3CiOl_jaCTZ0h")
 
 IMAGE_SIZE = 224
 mean, std = [0.4914, 0.4822, 0.4465], [0.247, 0.243, 0.261]
-
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
