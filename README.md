@@ -43,6 +43,13 @@ This guide will help you set up and install the necessary dependencies for runni
 ## Installation Steps
 
 1. **Clone the Repository:**
-
    ```bash
    git clone https://github.com/gjyotin305/CSL2050_CourseProject.git
+2. ```bash
+   cd CSL2050_CourseProject
+3. 
+   cd project-directory
+ 
+
+   
+   
