@@ -28,7 +28,7 @@
       <meta name="description" content="Composite Sketch+Text Queries for Retrieving Objects with Elusive Names and Complex Interactions">
        <meta name="keywords" content="sketch+text-based image retrieval, cross-modal retrieval, image retrieval, SBIR, CSTBIR;">
       <meta name="author" content="Prajwal Gatti">
-      <title>[AAAI 2024] Composite Sketch+Text Queries for Retrieving Objects with Elusive Names and Complex Interactions</title>
+      <title>Image Retrieval</title>
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="[AAAI 2024] Composite Sketch+Text Queries for Retrieving Objects with Elusive Names and Complex Interactions" />
@@ -42,7 +42,7 @@
 <body>
     <p class="title">Image Retrieval</p>
     <div style="text-align: center; font-size: 15pt; margin-bottom: 15px">
-            <span><a href="https://aaai.org/aaai-conference/">CSL2050 Course Project 2024</a></span>
+            <span><a href="https://aaai.org/aaai-conference/">CSL2050 Course Project 2024 remianing</a></span>
     </div>
     <p class="author">
         <span class="author"><a href="https://github.com/Jay18Mehta"> Jay Mehta</a>&nbsp;<sup>1</sup></span>
@@ -145,7 +145,7 @@
         </div>
         <p class="section">&nbsp;</p> -->
 
-<p class="section"><b>Youtube Video/b></p>
+<p class="section"><b>Youtube Video</b></p>
 <centre>
 <iframe width="667" height="500" src="https://www.youtube.com/embed/M8JcMv7Rznw">
 </iframe>
@@ -155,24 +155,24 @@
             <p class="section" id="related-paper"><b>Our Approaches</b></p>
             <ul>
                 <li>
-                    <h5>KNN: Utilizes similarity of feature vectors for classification.
-                        Without additional feature extraction techniques, KNN operates directly on raw pixel values or basic features.</h5>
+                    <h5>KNN:</h5> Utilizes similarity of feature vectors for classification.
+                        Without additional feature extraction techniques, KNN operates directly on raw pixel values or basic features.
 
                 </li><br>
                 <li>
-                    <b>Multimodal Query-guided Object Localization</b> [<a href="https://rdcu.be/dpps6">paper</a>]<br>
-                    Authors: Aditay Tripathi, Rajath R. Dani, Anand Mishra, Anirban Chakraborty.<br>
-                    Multimedia Tools and Applications 2023<br>
+                    <h5>PCA+KNN:</h5> rincipal Component Analysis (PCA) reduces dimensionality to capture significant variations.By reducing the dimensionality of the feature space, PCA aims to capture the most significant variations in the data.
                 </li><br>
                 <li>
-                    <h5>Resnet50 + KNN : Used the pretrained Resnet50, along with 3 additional 3 hidden linear layers to reduce the output
-                        layers size from 1000 to 10. Trained the above model on CIFAR-10 dataset to fine the model to give required output</h5>
+                    <h5>Resnet50 + KNN:</h5> Used the pretrained Resnet50, along with 3 additional 3 hidden linear layers to reduce the output
+                        layers size from 1000 to 10. Trained the above model on CIFAR-10 dataset to fine the model to give required output
                 </li><br>
                 <li>
-                    <b>Deep Embedding using Bayesian Risk Minimization with Application to Sketch Recognition</b> [<a href="https://arxiv.org/abs/1812.02466">paper</a>]<br>
-                    Authors: Anand Mishra, Ajeet Kumar Singh.<br>
-                    ACCV 2018<br>
-                </li>
+                    <h5>Resnet-18 + KNN:</h5> Resnet-18 for feature extraction of training images and testing images. Next used KNN on extracted features, which gives K nearest images from training data as output. This KNN modal has 72 percent accuracy on testing accuracy. Also, wherever the images are retrieved of the wrong class, these wrong class images are internally similar to the original class. For example, If the input image is of a cat, the output images will contain mostly cats with some other animals like dogs or horses, but any vehicle won't be output.
+                </li><br>
+                <li>
+                    <h5>ANN+KNN:</h5> First trained ANN with ReLU activation function and SGD optimizer to classify input images. Extracted images from training data which has the same class as the predicted class. Applied KNN to find Similar images. Ann has 52 percent accuracy, so retrieved images will have 52 percent accuracy as well.
+
+                </li><br>
             </ul>
         </div>
 
@@ -187,7 +187,7 @@
                      <div class="mainflip">
                            <div class="card">
                               <div class="card-body text-center card-no-padding">
-                                 <p><img class=" img-fluid" src="images/jay.jpeg" alt="card image"></p>
+                                 <p><img  src="images/jay.jpeg" alt="card image" height="130" width="100"></p>
                                  <h5 class="card-title">Jay <br> Mehta</h5>
                                  <ul class="list-inline">
                                    <li class="list-inline-item">
@@ -210,7 +210,7 @@
                      <div class="mainflip">
                            <div class="card">
                               <div class="card-body text-center card-no-padding">
-                                 <p><img class=" img-fluid" src="images/akshat.jpeg" alt="card image"></p>
+                                 <p><img src="images/akshat.jpeg" alt="card image" height="130" width="100"></p>
                                  <h5 class="card-title">Akshat <br> Jain</h5>
                                  <ul class="list-inline">
                                     <li class="list-inline-item">
@@ -231,7 +231,7 @@
                      <div class="mainflip">
                            <div class="card">
                               <div class="card-body text-center card-no-padding">
-                                 <p><img class=" img-fluid" src="images/dog.jpg" alt="card image"></p>
+                                 <p><img src="images/dog.jpg" alt="card image" height="130" width="100"></p>
                                  <h5 class="card-title">Harshiv Shah</h5>
                                  <ul class="list-inline">
                                     <li class="list-inline-item">
@@ -251,7 +251,7 @@
                      <div class="mainflip">
                            <div class="card">
                               <div class="card-body text-center card-no-padding">
-                                 <p><img class=" img-fluid" src="images/rhythm.jpeg" alt="card image"></p>
+                                 <p><img src="images/rhythm.jpeg" alt="card image" height="130" width="100"></p>
                                  <h5 class="card-title">Rhythm <br> Baghel</h5>
                                  <ul class="list-inline">
                                      <li class="list-inline-item">
@@ -271,7 +271,7 @@
                      <div class="mainflip">
                            <div class="card">
                               <div class="card-body text-center card-no-padding">
-                                 <p><img class=" img-fluid" src="images/jyotin.jpeg" alt="card image"></p>
+                                 <p><img src="images/jyotin.jpeg" alt="card image" height="130" width="100"></p>
                                  <h5 class="card-title">Jyotin <br> Goel</h5>
                                  <ul class="list-inline">
                                     
