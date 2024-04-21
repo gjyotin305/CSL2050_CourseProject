@@ -26,28 +26,73 @@
 
 ```bash
 ├── Experiments
+│   ├── ann_cifar.py
+│   ├── centroid_res18.py
 │   ├── cifar_10_knn.ipynb
+│   ├── cifar_10_knn_resnet18_73_percent.ipynb
 │   ├── cifar_10_pca_knn.ipynb
+│   ├── cifar_10_res50_m.py
 │   ├── cnn-resnet34-cifar10.ipynb
-│   ├── cifar_10_mean.ipynb
-│   ├── cifar_10_centroid.ipynb
+│   ├── Embedding_similarity.ipynb
 │   ├── HOG+KNN.ipynb
+│   ├── __init__.py
 │   ├── Logs
+│   │   ├── RESNET50_3HLL_CIFAR.out
 │   │   └── RESNET50_CIFAR.out
 │   ├── PCA+HOG+KNN.ipynb
-│   └── train.py
+│   ├── quicknet_cifar10_centroid.ipynb
+│   ├── quicknet_knn.py
+│   ├── Resnet50_classification.py
+│   ├── train_resnet50_3hll.py
+│   └── train_resnet50_iter_1.py
+├── flagged
+│   └── log.csv
+├── images
+│   ├── akshat.jpeg
+│   ├── dog.jpg
+│   ├── harshiv.jpg
+│   ├── horse.jpg
+│   ├── image2image.png
+│   ├── jay.jpeg
+│   ├── jyotin.jpeg
+│   ├── plane.jpg
+│   ├── rhythm.jpeg
+│   └── truck.jpg
+├── index.html
+├── __init__.py
 ├── LICENSE
 ├── MidTerm_Report.pdf
 ├── Model
+│   ├── ann.pt
+│   ├── centroid_app.py
 │   ├── CIFAR.pt
+│   ├── data
+│   │   ├── batches.meta
+│   │   ├── data_batch_1
+│   │   ├── data_batch_2
+│   │   ├── data_batch_3
+│   │   ├── data_batch_4
+│   │   ├── data_batch_5
+│   │   ├── mean_embeddings.pkl
+│   │   ├── test_batch
+│   │   └── train_embeddings_resnet18.pkl
+│   ├── pretrained_model_weights.h5
+│   ├── pretrained_weights_quicknet.py
+│   ├── resnet18.h5
+│   ├── Resnet50_train_features.pt
 │   └── test.py
-├──Gradio_Interface
-│   ├── ui_gradio.py
 ├── Preprocessing
 │   ├── cifar_eda.ipynb
 │   ├── k_means.py
 │   └── utils.py
-└── README.md
+├── __pycache__
+├── quicknet.gif
+├── README.md
+├── requirements.txt
+├── riyalnet.gif
+├── styles
+│   └── style.css
+└── ui_gradio.py
 ```
 # Image Retriever Installation Guide
 
