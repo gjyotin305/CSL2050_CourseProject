@@ -1,6 +1,14 @@
+<div align="center">
+
 # CSL2050 CourseProject
 
+[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
+![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/gjyotin305/CSL2050_CourseProject)
+
+</div>
+  
 ## TOPIC : Image Retrieval
+
 
 ## Team Members:
   - Akshat Jain (B22CS096)
