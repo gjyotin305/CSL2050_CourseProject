@@ -36,3 +36,13 @@
 │   └── utils.py
 └── README.md
 ```
+# Image Retriever Installation Guide
+
+This guide will help you set up and install the necessary dependencies for running the project.
+
+## Installation Steps
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/gjyotin305/CSL2050_CourseProject.git
