@@ -50,7 +50,7 @@ This guide will help you set up and install the necessary dependencies for runni
 3. ```bash
    pip install -r requirements.txt
 4. ```bash
-    python .\ui_gradio.py
+   python .\ui_gradio.py
 
 This command will start the Gradio interface and display the URL where you can access it. By default, it will run on `http://127.0.0.1:7860/`. 
 
