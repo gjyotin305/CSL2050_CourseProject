@@ -164,15 +164,43 @@
                     <h5>PCA+KNN:</h5>Principal Component Analysis (PCA) reduces dimensionality to capture significant variations.By reducing the dimensionality of the feature space, PCA aims to capture the most significant variations in the data.
                 </li><br>
                 <li>
-                    <h5>Resnet50 + KNN:</h5> Used the pretrained Resnet50, along with 3 additional 3 hidden linear layers to reduce the output
-                        layers size from 1000 to 10. Trained the above model on CIFAR-10 dataset to fine the model to give required output
-                </li><br>
-                <li>
-                    <h5>Resnet-18 + KNN:</h5> Resnet-18 for feature extraction of training images and testing images. Next used KNN on extracted features, which gives K nearest images from training data as output. This KNN modal has 72 percent accuracy on testing accuracy. Also, wherever the images are retrieved of the wrong class, these wrong class images are internally similar to the original class. For example, If the input image is of a cat, the output images will contain mostly cats with some other animals like dogs or horses, but any vehicle won't be output.
+                    <h5>Quicknet + KNN:</h5>Used Quicknet for feature extraction of training images and testing images.Next used KNN on extracted features, which gives K nearest images from training data as output.This KNN modal has 72 percent accuracy on testing accuracy. Also,wherever the images are retrieved of the wrong class, these wrong class
+                    images are internally similar to the original class. For example, If the
+                    input image is of a cat, the output images will contain mostly cats
+                    with some other animals like dogs or horses, but any vehicle won't be
+                    output
                 </li><br>
                 <li>
                     <h5>ANN+KNN:</h5> First trained ANN with ReLU activation function and SGD optimizer to classify input images. Extracted images from training data which has the same class as the predicted class. Applied KNN to find Similar images. Ann has 52 percent accuracy, so retrieved images will have 52 percent accuracy as well.
 
+                </li><br>
+                <li>
+                    <h5>HOG+KNN:</h5> HOG captures object shape and appearance.Combined with KNN for similarity matching
+                </li><br>
+                <li>
+                    <h5>PCA+HOG+KNN:</h5> Combines PCA dimensionality reduction with HOG's object shape capturing.PCA reduces the dimensionality of the feature space, while HOG descriptors capture object shapes and appearances.
+                </li><br>
+                <li>
+                    <h5>Riyalnet + Euclidean distance:</h5>Used the pretrained Resnet50, along with 3 additional 3 hidden linear
+                    layers to reduce the output layers size from 1000 to 10.
+                    Trained the above model on CIFAR-10 dataset to fine the model to
+                    give required output.
+                    Used the fine-tuned model to predict the class of the input image and
+                    then from the predicted class, used euclidian distance to retrieve the
+                    images closest to the query image .
+                </li><br>
+                <li>
+                    <h5>Quicknet + Centroid:</h5> Used Quicknet architecture to extract the features of CIFAR-10 dataset.
+                    Now we calculated the mean embeddings of each class by calculating
+                    the mean using each sample of the respective class.(The mean embed-
+                    dings are referred as centroid)
+                    After calculating 10 centroids (one for each class), we extracted the
+                    features of the query image and compared the embeddings of the query
+                    image with each centroid. The query image belongs to the class whose
+                    centroid is nearest to it.
+                    This method has an accuracy of 80 percent. This method is extremely
+                    fast as it requires only 10 comparisons after the features have been
+                    extracted..
                 </li><br>
             </ul>
         </div>
